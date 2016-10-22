@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E56B0BE1DBB872C002DFD30 /* forgotten-futurist.bold-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B0BA1DBB872C002DFD30 /* forgotten-futurist.bold-italic.ttf */; };
+		4E56B0BF1DBB872C002DFD30 /* forgotten-futurist.bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B0BB1DBB872C002DFD30 /* forgotten-futurist.bold.ttf */; };
+		4E56B0C01DBB872C002DFD30 /* forgotten-futurist.italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B0BC1DBB872C002DFD30 /* forgotten-futurist.italic.ttf */; };
+		4E56B0C11DBB872C002DFD30 /* forgotten-futurist.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B0BD1DBB872C002DFD30 /* forgotten-futurist.regular.ttf */; };
 		4EB3BA941DBB79840057D087 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB3BA931DBB79840057D087 /* AppDelegate.swift */; };
 		4EB3BA961DBB79840057D087 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB3BA951DBB79840057D087 /* ViewController.swift */; };
 		4EB3BA991DBB79840057D087 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB3BA971DBB79840057D087 /* Main.storyboard */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E56B0BA1DBB872C002DFD30 /* forgotten-futurist.bold-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "forgotten-futurist.bold-italic.ttf"; sourceTree = "<group>"; };
+		4E56B0BB1DBB872C002DFD30 /* forgotten-futurist.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "forgotten-futurist.bold.ttf"; sourceTree = "<group>"; };
+		4E56B0BC1DBB872C002DFD30 /* forgotten-futurist.italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "forgotten-futurist.italic.ttf"; sourceTree = "<group>"; };
+		4E56B0BD1DBB872C002DFD30 /* forgotten-futurist.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "forgotten-futurist.regular.ttf"; sourceTree = "<group>"; };
 		4EB3BA901DBB79840057D087 /* CameraBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB3BA931DBB79840057D087 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EB3BA951DBB79840057D087 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +140,10 @@
 			isa = PBXGroup;
 			children = (
 				4EB3BAC11DBB7A8D0057D087 /* norwester.regular.otf */,
+				4E56B0BA1DBB872C002DFD30 /* forgotten-futurist.bold-italic.ttf */,
+				4E56B0BB1DBB872C002DFD30 /* forgotten-futurist.bold.ttf */,
+				4E56B0BC1DBB872C002DFD30 /* forgotten-futurist.italic.ttf */,
+				4E56B0BD1DBB872C002DFD30 /* forgotten-futurist.regular.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -247,7 +259,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EB3BA9E1DBB79840057D087 /* LaunchScreen.storyboard in Resources */,
+				4E56B0BF1DBB872C002DFD30 /* forgotten-futurist.bold.ttf in Resources */,
 				4EB3BAC21DBB7A8D0057D087 /* norwester.regular.otf in Resources */,
+				4E56B0BE1DBB872C002DFD30 /* forgotten-futurist.bold-italic.ttf in Resources */,
+				4E56B0C01DBB872C002DFD30 /* forgotten-futurist.italic.ttf in Resources */,
+				4E56B0C11DBB872C002DFD30 /* forgotten-futurist.regular.ttf in Resources */,
 				4EB3BA9B1DBB79840057D087 /* Assets.xcassets in Resources */,
 				4EB3BA991DBB79840057D087 /* Main.storyboard in Resources */,
 			);
@@ -526,6 +542,7 @@
 				4EB3BABA1DBB79850057D087 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EB3BABB1DBB79850057D087 /* Build configuration list for PBXNativeTarget "CameraBuddyTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +551,7 @@
 				4EB3BABD1DBB79850057D087 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EB3BABE1DBB79850057D087 /* Build configuration list for PBXNativeTarget "CameraBuddyUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +560,7 @@
 				4EB3BAC01DBB79850057D087 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
