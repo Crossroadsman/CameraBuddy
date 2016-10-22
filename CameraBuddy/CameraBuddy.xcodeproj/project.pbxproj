@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E125D351DBC24E10075E823 /* CameraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E125D341DBC24E10075E823 /* CameraTextField.swift */; };
 		4E56B0BE1DBB872C002DFD30 /* forgotten-futurist.bold-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B0BA1DBB872C002DFD30 /* forgotten-futurist.bold-italic.ttf */; };
 		4E56B0BF1DBB872C002DFD30 /* forgotten-futurist.bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B0BB1DBB872C002DFD30 /* forgotten-futurist.bold.ttf */; };
 		4E56B0C01DBB872C002DFD30 /* forgotten-futurist.italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B0BC1DBB872C002DFD30 /* forgotten-futurist.italic.ttf */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E125D341DBC24E10075E823 /* CameraTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraTextField.swift; sourceTree = "<group>"; };
 		4E56B0BA1DBB872C002DFD30 /* forgotten-futurist.bold-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "forgotten-futurist.bold-italic.ttf"; sourceTree = "<group>"; };
 		4E56B0BB1DBB872C002DFD30 /* forgotten-futurist.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "forgotten-futurist.bold.ttf"; sourceTree = "<group>"; };
 		4E56B0BC1DBB872C002DFD30 /* forgotten-futurist.italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "forgotten-futurist.italic.ttf"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				4EB3BA9A1DBB79840057D087 /* Assets.xcassets */,
 				4EB3BA9C1DBB79840057D087 /* LaunchScreen.storyboard */,
 				4EB3BA9F1DBB79840057D087 /* Info.plist */,
+				4E125D341DBC24E10075E823 /* CameraTextField.swift */,
 			);
 			path = CameraBuddy;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EB3BA961DBB79840057D087 /* ViewController.swift in Sources */,
+				4E125D351DBC24E10075E823 /* CameraTextField.swift in Sources */,
 				4EB3BA941DBB79840057D087 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
