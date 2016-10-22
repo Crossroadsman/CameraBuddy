@@ -41,5 +41,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>norwester.regular.otf</string>
+		<string>forgotten-futurist.regular.ttf</string>
+	</array>
 </dict>
 </plist>

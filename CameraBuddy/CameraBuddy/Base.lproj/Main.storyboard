@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Buddy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5Q-oO-Vho">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="300" verticalHuggingPriority="300" text="Camera Buddy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5Q-oO-Vho">
                                 <fontDescription key="fontDescription" name="ForgottenFuturistRg-Regular" family="Forgotten Futurist" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -40,12 +40,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZC-G6-wRO">
-                                                <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="ForgottenFuturistRg-Regular" family="Forgotten Futurist" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjY-cW-6Jq" userLabel="B">
-                                                <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="ForgottenFuturistRg-Regular" family="Forgotten Futurist" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -168,10 +168,10 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ma3-oQ-PdH" secondAttribute="bottom" constant="8" id="7pE-XJ-rV8"/>
-                            <constraint firstItem="ma3-oQ-PdH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="LO4-r1-4ye"/>
+                            <constraint firstItem="ma3-oQ-PdH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="LO4-r1-4ye"/>
                             <constraint firstItem="n5Q-oO-Vho" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pej-0P-lzp"/>
                             <constraint firstItem="n5Q-oO-Vho" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SfJ-x6-9V2"/>
-                            <constraint firstAttribute="trailing" secondItem="ma3-oQ-PdH" secondAttribute="trailing" constant="8" id="ctS-48-wgp"/>
+                            <constraint firstAttribute="trailing" secondItem="ma3-oQ-PdH" secondAttribute="trailing" constant="12" id="ctS-48-wgp"/>
                             <constraint firstItem="ma3-oQ-PdH" firstAttribute="top" secondItem="n5Q-oO-Vho" secondAttribute="bottom" constant="8" id="lu4-hm-zgD"/>
                         </constraints>
                     </view>
