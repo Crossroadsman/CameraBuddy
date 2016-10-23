@@ -87,26 +87,18 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Shutter" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HgV-YJ-UzK">
-                                                <color key="textColor" red="0.98544234037399292" green="0.79755169153213501" blue="0.012491157278418541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8E-cE-dI2">
                                                 <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                                        <color key="value" red="0.98431372549999996" green="0.79607843140000001" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Shutter" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F67-4Z-2zx">
-                                                <color key="textColor" red="0.98544234040000001" green="0.79755169150000005" blue="0.01249115728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Enter Shutter Speed">
+                                                    <color key="titleColor" red="0.98431372549999996" green="0.79607843140000001" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcB-qL-ET0">
                                                 <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                                        <color key="value" red="0.98431372549999996" green="0.79607843140000001" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textField>
+                                                <state key="normal" title="Enter Shutter Speed">
+                                                    <color key="titleColor" red="0.98431372549999996" green="0.79607843140000001" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="nWb-cL-nEi" userLabel="EV Stack">
@@ -194,11 +186,19 @@
                                     <constraint firstAttribute="trailing" secondItem="nLu-Wg-CLk" secondAttribute="trailing" id="xfQ-vN-7lR"/>
                                 </constraints>
                             </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAU-Ye-kvF">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="ksn-cm-wAJ"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ma3-oQ-PdH" secondAttribute="bottom" constant="8" id="7pE-XJ-rV8"/>
+                            <constraint firstAttribute="trailing" secondItem="QAU-Ye-kvF" secondAttribute="trailing" constant="80" id="9ZL-1w-RQX"/>
+                            <constraint firstItem="QAU-Ye-kvF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="80" id="EJ2-0s-ryr"/>
                             <constraint firstItem="ma3-oQ-PdH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="LO4-r1-4ye"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QAU-Ye-kvF" secondAttribute="bottom" id="PWm-0z-VfZ"/>
                             <constraint firstItem="n5Q-oO-Vho" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pej-0P-lzp"/>
                             <constraint firstItem="n5Q-oO-Vho" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SfJ-x6-9V2"/>
                             <constraint firstAttribute="trailing" secondItem="ma3-oQ-PdH" secondAttribute="trailing" constant="12" id="ctS-48-wgp"/>
