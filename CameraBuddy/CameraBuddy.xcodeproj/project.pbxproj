@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E125D351DBC24E10075E823 /* CameraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E125D341DBC24E10075E823 /* CameraTextField.swift */; };
+		4E42CF761DBC9B65008AB7A6 /* ShutterSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E42CF751DBC9B65008AB7A6 /* ShutterSpeed.swift */; };
 		4E56B0BE1DBB872C002DFD30 /* forgotten-futurist.bold-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B0BA1DBB872C002DFD30 /* forgotten-futurist.bold-italic.ttf */; };
 		4E56B0BF1DBB872C002DFD30 /* forgotten-futurist.bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B0BB1DBB872C002DFD30 /* forgotten-futurist.bold.ttf */; };
 		4E56B0C01DBB872C002DFD30 /* forgotten-futurist.italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B0BC1DBB872C002DFD30 /* forgotten-futurist.italic.ttf */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		4E125D341DBC24E10075E823 /* CameraTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraTextField.swift; sourceTree = "<group>"; };
+		4E42CF751DBC9B65008AB7A6 /* ShutterSpeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShutterSpeed.swift; sourceTree = "<group>"; };
 		4E56B0BA1DBB872C002DFD30 /* forgotten-futurist.bold-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "forgotten-futurist.bold-italic.ttf"; sourceTree = "<group>"; };
 		4E56B0BB1DBB872C002DFD30 /* forgotten-futurist.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "forgotten-futurist.bold.ttf"; sourceTree = "<group>"; };
 		4E56B0BC1DBB872C002DFD30 /* forgotten-futurist.italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "forgotten-futurist.italic.ttf"; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E42CF741DBC9B22008AB7A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E42CF751DBC9B65008AB7A6 /* ShutterSpeed.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		4EB3BA871DBB79840057D087 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +120,7 @@
 		4EB3BA921DBB79840057D087 /* CameraBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				4E42CF741DBC9B22008AB7A6 /* Model */,
 				4EB3BA931DBB79840057D087 /* AppDelegate.swift */,
 				4EB3BA951DBB79840057D087 /* ViewController.swift */,
 				4EB3BA971DBB79840057D087 /* Main.storyboard */,
@@ -294,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EB3BA961DBB79840057D087 /* ViewController.swift in Sources */,
+				4E42CF761DBC9B65008AB7A6 /* ShutterSpeed.swift in Sources */,
 				4E125D351DBC24E10075E823 /* CameraTextField.swift in Sources */,
 				4EB3BA941DBB79840057D087 /* AppDelegate.swift in Sources */,
 			);

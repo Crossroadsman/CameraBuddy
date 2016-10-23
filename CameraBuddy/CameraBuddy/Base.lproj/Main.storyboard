@@ -92,12 +92,18 @@
                                                 <state key="normal" title="Enter Shutter Speed">
                                                     <color key="titleColor" red="0.98431372549999996" green="0.79607843140000001" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="shutterAButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3o7-PM-nCC"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcB-qL-ET0">
                                                 <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="14"/>
                                                 <state key="normal" title="Enter Shutter Speed">
                                                     <color key="titleColor" red="0.98431372549999996" green="0.79607843140000001" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="shutterBButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uDq-yh-iF8"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -186,7 +192,8 @@
                                     <constraint firstAttribute="trailing" secondItem="nLu-Wg-CLk" secondAttribute="trailing" id="xfQ-vN-7lR"/>
                                 </constraints>
                             </stackView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAU-Ye-kvF">
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAU-Ye-kvF">
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.79607843140000001" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="ksn-cm-wAJ"/>
                                 </constraints>
@@ -205,6 +212,19 @@
                             <constraint firstItem="ma3-oQ-PdH" firstAttribute="top" secondItem="n5Q-oO-Vho" secondAttribute="bottom" constant="8" id="lu4-hm-zgD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="apertureATextField" destination="lmT-5d-0KB" id="t8H-px-qdZ"/>
+                        <outlet property="apertureBTextField" destination="llS-Rs-rRu" id="LKS-fc-z3x"/>
+                        <outlet property="evALabel" destination="zfM-H3-JDk" id="PrG-23-YvG"/>
+                        <outlet property="evBLabel" destination="c2g-kb-ZpH" id="oDh-Zy-qrG"/>
+                        <outlet property="isoATextField" destination="DbG-Pv-jYT" id="tLP-ii-aS1"/>
+                        <outlet property="isoBTextField" destination="jes-TF-7YR" id="Paj-YG-dDc"/>
+                        <outlet property="lvALabel" destination="yvr-ti-ZcT" id="faG-zI-hIk"/>
+                        <outlet property="lvBLabel" destination="FXa-Ee-Bgi" id="cSl-90-DKi"/>
+                        <outlet property="shutterAButton" destination="h8E-cE-dI2" id="euO-te-aj4"/>
+                        <outlet property="shutterBButton" destination="RcB-qL-ET0" id="P3t-kk-hbK"/>
+                        <outlet property="shutterSpeedPicker" destination="QAU-Ye-kvF" id="Wqz-MP-Nid"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
