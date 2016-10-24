@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E125D351DBC24E10075E823 /* CameraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E125D341DBC24E10075E823 /* CameraTextField.swift */; };
 		4E42CF761DBC9B65008AB7A6 /* ShutterSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E42CF751DBC9B65008AB7A6 /* ShutterSpeed.swift */; };
 		4E56B0BE1DBB872C002DFD30 /* forgotten-futurist.bold-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B0BA1DBB872C002DFD30 /* forgotten-futurist.bold-italic.ttf */; };
 		4E56B0BF1DBB872C002DFD30 /* forgotten-futurist.bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B0BB1DBB872C002DFD30 /* forgotten-futurist.bold.ttf */; };
@@ -21,6 +20,8 @@
 		4EB3BAA91DBB79840057D087 /* CameraBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB3BAA81DBB79840057D087 /* CameraBuddyTests.swift */; };
 		4EB3BAB41DBB79850057D087 /* CameraBuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB3BAB31DBB79850057D087 /* CameraBuddyUITests.swift */; };
 		4EB3BAC21DBB7A8D0057D087 /* norwester.regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4EB3BAC11DBB7A8D0057D087 /* norwester.regular.otf */; };
+		4EB9951B1DBE2C8A00D3F3CF /* Exposure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB9951A1DBE2C8A00D3F3CF /* Exposure.swift */; };
+		4EB9951E1DBE36AA00D3F3CF /* YellowTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB9951D1DBE36AA00D3F3CF /* YellowTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4E125D341DBC24E10075E823 /* CameraTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraTextField.swift; sourceTree = "<group>"; };
 		4E42CF751DBC9B65008AB7A6 /* ShutterSpeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShutterSpeed.swift; sourceTree = "<group>"; };
 		4E56B0BA1DBB872C002DFD30 /* forgotten-futurist.bold-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "forgotten-futurist.bold-italic.ttf"; sourceTree = "<group>"; };
 		4E56B0BB1DBB872C002DFD30 /* forgotten-futurist.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "forgotten-futurist.bold.ttf"; sourceTree = "<group>"; };
@@ -61,6 +61,8 @@
 		4EB3BAB31DBB79850057D087 /* CameraBuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraBuddyUITests.swift; sourceTree = "<group>"; };
 		4EB3BAB51DBB79850057D087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EB3BAC11DBB7A8D0057D087 /* norwester.regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = norwester.regular.otf; sourceTree = "<group>"; };
+		4EB9951A1DBE2C8A00D3F3CF /* Exposure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exposure.swift; sourceTree = "<group>"; };
+		4EB9951D1DBE36AA00D3F3CF /* YellowTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				4E42CF751DBC9B65008AB7A6 /* ShutterSpeed.swift */,
+				4EB9951A1DBE2C8A00D3F3CF /* Exposure.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -120,14 +123,14 @@
 		4EB3BA921DBB79840057D087 /* CameraBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				4EB9951C1DBE368800D3F3CF /* View */,
+				4EB995191DBE2C5300D3F3CF /* Controller */,
 				4E42CF741DBC9B22008AB7A6 /* Model */,
 				4EB3BA931DBB79840057D087 /* AppDelegate.swift */,
-				4EB3BA951DBB79840057D087 /* ViewController.swift */,
 				4EB3BA971DBB79840057D087 /* Main.storyboard */,
 				4EB3BA9A1DBB79840057D087 /* Assets.xcassets */,
 				4EB3BA9C1DBB79840057D087 /* LaunchScreen.storyboard */,
 				4EB3BA9F1DBB79840057D087 /* Info.plist */,
-				4E125D341DBC24E10075E823 /* CameraTextField.swift */,
 			);
 			path = CameraBuddy;
 			sourceTree = "<group>";
@@ -160,6 +163,22 @@
 				4E56B0BD1DBB872C002DFD30 /* forgotten-futurist.regular.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		4EB995191DBE2C5300D3F3CF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4EB3BA951DBB79840057D087 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4EB9951C1DBE368800D3F3CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4EB9951D1DBE36AA00D3F3CF /* YellowTextField.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,9 +323,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EB9951B1DBE2C8A00D3F3CF /* Exposure.swift in Sources */,
 				4EB3BA961DBB79840057D087 /* ViewController.swift in Sources */,
 				4E42CF761DBC9B65008AB7A6 /* ShutterSpeed.swift in Sources */,
-				4E125D351DBC24E10075E823 /* CameraTextField.swift in Sources */,
+				4EB9951E1DBE36AA00D3F3CF /* YellowTextField.swift in Sources */,
 				4EB3BA941DBB79840057D087 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

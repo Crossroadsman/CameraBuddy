@@ -58,25 +58,31 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Aperture" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lmT-5d-0KB">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Aperture" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lmT-5d-0KB" customClass="YellowTextField" customModule="CameraBuddy" customModuleProvider="target">
                                                 <color key="textColor" red="0.98431372549019602" green="0.79607843137254897" blue="0.011764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
                                                         <color key="value" red="0.98431372549999996" green="0.79607843140000001" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didEndEditingApertureA:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="gNQ-7d-QYk"/>
+                                                </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Aperture" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="llS-Rs-rRu">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Aperture" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="llS-Rs-rRu" customClass="YellowTextField" customModule="CameraBuddy" customModuleProvider="target">
                                                 <color key="textColor" red="0.98544234040000001" green="0.79755169150000005" blue="0.01249115728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
                                                         <color key="value" red="0.98431372549999996" green="0.79607843140000001" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didEndEditingApertureB:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="WfG-7K-LEe"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -133,25 +139,31 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter ISO" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DbG-Pv-jYT">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter ISO" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DbG-Pv-jYT" customClass="YellowTextField" customModule="CameraBuddy" customModuleProvider="target">
                                                 <color key="textColor" red="0.98544234040000001" green="0.79755169150000005" blue="0.01249115728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
                                                         <color key="value" red="0.98431372549999996" green="0.79607843140000001" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didEndEditingIsoA:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="qIM-dq-Bqq"/>
+                                                </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter ISO" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jes-TF-7YR">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter ISO" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jes-TF-7YR" customClass="YellowTextField" customModule="CameraBuddy" customModuleProvider="target">
                                                 <color key="textColor" red="0.98544234040000001" green="0.79755169150000005" blue="0.01249115728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
                                                         <color key="value" red="0.98431372549999996" green="0.79607843140000001" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didEndEditingIsoB:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Tmn-QX-WWD"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -195,6 +207,7 @@
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAU-Ye-kvF">
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.79607843140000001" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="jdD-22-SKO"/>
                                     <constraint firstAttribute="height" constant="160" id="ksn-cm-wAJ"/>
                                 </constraints>
                             </pickerView>
@@ -202,13 +215,12 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ma3-oQ-PdH" secondAttribute="bottom" constant="8" id="7pE-XJ-rV8"/>
-                            <constraint firstAttribute="trailing" secondItem="QAU-Ye-kvF" secondAttribute="trailing" constant="80" id="9ZL-1w-RQX"/>
-                            <constraint firstItem="QAU-Ye-kvF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="80" id="EJ2-0s-ryr"/>
                             <constraint firstItem="ma3-oQ-PdH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="LO4-r1-4ye"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QAU-Ye-kvF" secondAttribute="bottom" id="PWm-0z-VfZ"/>
                             <constraint firstItem="n5Q-oO-Vho" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pej-0P-lzp"/>
                             <constraint firstItem="n5Q-oO-Vho" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SfJ-x6-9V2"/>
                             <constraint firstAttribute="trailing" secondItem="ma3-oQ-PdH" secondAttribute="trailing" constant="12" id="ctS-48-wgp"/>
+                            <constraint firstItem="QAU-Ye-kvF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k4N-vw-T5B"/>
                             <constraint firstItem="ma3-oQ-PdH" firstAttribute="top" secondItem="n5Q-oO-Vho" secondAttribute="bottom" constant="8" id="lu4-hm-zgD"/>
                         </constraints>
                     </view>

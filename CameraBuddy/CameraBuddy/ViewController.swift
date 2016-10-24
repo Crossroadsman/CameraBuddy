@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum Exposure {
+enum Item {
     case a
     case b
 }
@@ -21,7 +21,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return true
     }
     
-    var currentExposure = Exposure.a
+    var currentItem = Item.a
+    var exposureA = Exposure(aperture: 1.0, shutter: 1.0, iso: 100)
+    var exposureB = Exposure(aperture: 1.0, shutter: 1.0, iso: 100)
     
     // MARK: - IBOutlets
     // -----------------
@@ -60,14 +62,52 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     // MARK: - IBActions
     // -----------------
+    @IBAction func didEndEditingApertureA(_ sender: UITextField) {
+        
+        print (sender.text)
+        if let text = sender.text, let asDouble = Double(text) {
+            exposureA.aperture = asDouble
+            updateUI()
+        }
+        
+    }
+    
+    @IBAction func didEndEditingApertureB(_ sender: UITextField) {
+        
+        print (sender.text)
+        if let text = sender.text, let asDouble = Double(text) {
+            exposureB.aperture = asDouble
+            updateUI()
+        }
+    }
+    
+    @IBAction func didEndEditingIsoA(_ sender: UITextField) {
+        
+        print (sender.text)
+        if let text = sender.text, let asDouble = Double(text) {
+            exposureA.iso = asDouble
+            updateUI()
+        }
+    }
+    
+    @IBAction func didEndEditingIsoB(_ sender: UITextField) {
+        
+        print (sender.text)
+        if let text = sender.text, let asDouble = Double(text) {
+            exposureB.iso = asDouble
+            updateUI()
+        }
+    }
+    
+    
     @IBAction func shutterAButtonTapped(_ sender: AnyObject) {
         shutterSpeedPicker.isHidden = false
-        currentExposure = .a
+        currentItem = .a
     }
     
     @IBAction func shutterBButtonTapped(_ sender: AnyObject) {
         shutterSpeedPicker.isHidden = false
-        currentExposure = .b
+        currentItem = .b
     }
     
     // MARK: - UIPickerviewDelegateMethods
@@ -77,17 +117,20 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        switch currentExposure {
+        switch currentItem {
         case .a:
             shutterA = ShutterSpeed(name: shutterSpeeds[row].name, seconds: shutterSpeeds[row].seconds)
             shutterAButton.setTitle(shutterA.name, for: .normal)
+            exposureA.shutter = shutterA.seconds
         case .b:
             shutterB = ShutterSpeed(name: shutterSpeeds[row].name, seconds: shutterSpeeds[row].seconds)
             shutterBButton.setTitle(shutterB.name, for: .normal)
+            exposureB.shutter = shutterB.seconds
         default:
             print("error, currentExposure should always be .a or .b")
         }
         shutterSpeedPicker.isHidden = true
+        updateUI()
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -96,6 +139,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return shutterSpeeds.count
+    }
+    
+    // MARK: - Other Methods
+    // ---------------------
+    func updateUI() {
+        evALabel.text = String(format: "%.2f", exposureA.ev)
+        evBLabel.text = String(format: "%.2f", exposureB.ev)
+        lvALabel.text = String(format: "%.2f", exposureA.lv)
+        lvBLabel.text = String(format: "%.2f", exposureB.lv)
     }
 
 
