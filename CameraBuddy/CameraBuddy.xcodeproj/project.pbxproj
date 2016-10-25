@@ -128,8 +128,8 @@
 				4E42CF741DBC9B22008AB7A6 /* Model */,
 				4EB3BA931DBB79840057D087 /* AppDelegate.swift */,
 				4EB3BA971DBB79840057D087 /* Main.storyboard */,
-				4EB3BA9A1DBB79840057D087 /* Assets.xcassets */,
 				4EB3BA9C1DBB79840057D087 /* LaunchScreen.storyboard */,
+				4EB3BA9A1DBB79840057D087 /* Assets.xcassets */,
 				4EB3BA9F1DBB79840057D087 /* Info.plist */,
 			);
 			path = CameraBuddy;

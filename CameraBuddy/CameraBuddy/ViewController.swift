@@ -53,6 +53,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         shutterSpeedPicker.delegate = self
         shutterSpeedPicker.dataSource = self
         
+        // create a tap gesture recognizer to identify taps outside of the number pad
+        let tapRecognizer = UITapGestureRecognizer()
+        tapRecognizer.addTarget(self, action: "didTapView")
+        self.view.addGestureRecognizer(tapRecognizer)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -149,6 +154,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         lvALabel.text = String(format: "%.2f", exposureA.lv)
         lvBLabel.text = String(format: "%.2f", exposureB.lv)
     }
+    
+    func didTapView() {
+        self.view.endEditing(true)
+    }
+    
 
 
 }
