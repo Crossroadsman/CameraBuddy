@@ -71,6 +71,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         print (sender.text)
         if let text = sender.text, let asDouble = Double(text) {
+            print("updating apertureA to \(asDouble)")
             exposureA.aperture = asDouble
             updateUI()
         }
@@ -81,6 +82,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         print (sender.text)
         if let text = sender.text, let asDouble = Double(text) {
+            print("updating apertureB to \(asDouble)")
             exposureB.aperture = asDouble
             updateUI()
         }
@@ -90,6 +92,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         print (sender.text)
         if let text = sender.text, let asDouble = Double(text) {
+            print("updating isoA to \(asDouble)")
             exposureA.iso = asDouble
             updateUI()
         }
@@ -99,6 +102,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         print (sender.text)
         if let text = sender.text, let asDouble = Double(text) {
+            print("updating isoB to \(asDouble)")
             exposureB.iso = asDouble
             updateUI()
         }
