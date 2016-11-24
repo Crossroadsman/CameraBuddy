@@ -13,7 +13,7 @@ enum Item {
     case b
 }
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     // MARK: - Properties
     // ------------------
@@ -57,6 +57,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let tapRecognizer = UITapGestureRecognizer()
         tapRecognizer.addTarget(self, action: "didTapView")
         self.view.addGestureRecognizer(tapRecognizer)
+        
+        // make VC the delegate of the textfields
+        apertureATextField.delegate = self
+        apertureBTextField.delegate = self
+        isoATextField.delegate = self
+        isoBTextField.delegate = self
+        
         
     }
 
@@ -150,6 +157,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return shutterSpeeds.count
     }
     
+    // MARK: - Textfield Delegate Methods
+    // ----------------------------------
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     // MARK: - Other Methods
     // ---------------------
     func updateUI() {
@@ -162,6 +176,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func didTapView() {
         self.view.endEditing(true)
     }
+    
     
 
 
