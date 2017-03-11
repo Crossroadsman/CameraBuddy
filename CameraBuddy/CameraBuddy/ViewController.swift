@@ -13,7 +13,7 @@ enum Item {
     case b
 }
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     // MARK: - Properties
     // ------------------
@@ -44,20 +44,28 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var shutterSpeedPicker: UIPickerView!
     
+    
+    var textFields = [UITextField]()
+    
     // MARK: - ViewController Standard Methods
     // ---------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        shutterSpeedPicker.delegate = self
-        shutterSpeedPicker.dataSource = self
         
         // create a tap gesture recognizer to identify taps outside of the number pad
         let tapRecognizer = UITapGestureRecognizer()
-        tapRecognizer.addTarget(self, action: "didTapView")
+        tapRecognizer.addTarget(self, action: #selector(ViewController.didTapView))
         self.view.addGestureRecognizer(tapRecognizer)
         
+        //delegates
+        textFields = [apertureATextField, apertureBTextField, isoATextField, isoBTextField]
+        textFields.forEach {$0.delegate = self}
+
+        shutterSpeedPicker.delegate = self
+        shutterSpeedPicker.dataSource = self
+        
+        //configure keyboard
+        addDoneButtonToKeyboard()
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,48 +75,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     // MARK: - IBActions
     // -----------------
-    @IBAction func didEndEditingApertureA(_ sender: UITextField) {
-        
-        print (sender.text)
-        if let text = sender.text, let asDouble = Double(text) {
-            print("updating apertureA to \(asDouble)")
-            exposureA.aperture = asDouble
-            updateUI()
-        }
-        
-    }
-    
-    @IBAction func didEndEditingApertureB(_ sender: UITextField) {
-        
-        print (sender.text)
-        if let text = sender.text, let asDouble = Double(text) {
-            print("updating apertureB to \(asDouble)")
-            exposureB.aperture = asDouble
-            updateUI()
-        }
-    }
-    
-    @IBAction func didEndEditingIsoA(_ sender: UITextField) {
-        
-        print (sender.text)
-        if let text = sender.text, let asDouble = Double(text) {
-            print("updating isoA to \(asDouble)")
-            exposureA.iso = asDouble
-            updateUI()
-        }
-    }
-    
-    @IBAction func didEndEditingIsoB(_ sender: UITextField) {
-        
-        print (sender.text)
-        if let text = sender.text, let asDouble = Double(text) {
-            print("updating isoB to \(asDouble)")
-            exposureB.iso = asDouble
-            updateUI()
-        }
-    }
-    
-    
     @IBAction func shutterAButtonTapped(_ sender: AnyObject) {
         shutterSpeedPicker.isHidden = false
         currentItem = .a
@@ -150,6 +116,38 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return shutterSpeeds.count
     }
     
+    //MARK: - TextField Methods
+    //-------------------------
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("value: '<\(textField.text)>'")
+        
+        let text = textField.text!
+        
+        switch textField {
+        case apertureATextField:
+            exposureA.aperture = Double(text)!
+            updateUI()
+        case apertureBTextField:
+            exposureB.aperture = Double(text)!
+            updateUI()
+        case isoATextField:
+            exposureA.iso = Double(text)!
+            updateUI()
+        case isoBTextField:
+            exposureB.iso = Double(text)!
+            updateUI()
+        default:
+            fatalError("unknown textField")
+        }
+        
+        //self.view.endEditing(true)
+    }
+    
     // MARK: - Other Methods
     // ---------------------
     func updateUI() {
@@ -163,6 +161,44 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.view.endEditing(true)
     }
     
+    /**
+     Adds a toolbar which includes a done button to:
+     - textfields: the (non-default) keyboard;
+     */
+    func addDoneButtonToKeyboard() {
+        //init toolbar
+        let toolbarFrame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 30)
+        let toolbar = UIToolbar(frame: toolbarFrame)
+        
+        //define left side empty space so that button appears on right
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        //define the actual button
+        //(note that the action has to be a #selector)
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
+        
+        //define the button group
+        let arr: [UIBarButtonItem] = [flexSpace, doneButton]
+        
+        //instantiate button group on toolbar
+        toolbar.setItems(arr, animated: false)
+        toolbar.sizeToFit()
+        
+        //assign toolbar as inputAccessoryView to:
+        //  - textfields where keyboard is not default
+        //  - all textviews
+        textFields.forEach {
+            if $0.keyboardType != .default {
+                $0.inputAccessoryView = toolbar
+            }
+        }
+    }
+    
+    //need @objc to enable #selector
+    @objc func doneButtonAction() {
+        self.view.endEditing(true)
+    }
+
 
 
 }

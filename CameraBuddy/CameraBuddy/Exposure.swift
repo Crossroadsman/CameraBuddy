@@ -54,7 +54,7 @@ class Exposure {
     }
     
     var lv: Double {
-        return ev + log2(iso / 100.0)
+        return ev - log2(iso / 100.0)
     }
     
     init(aperture: Double, shutter: Double, iso: Double) {
